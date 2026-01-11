@@ -1,0 +1,168 @@
+.header {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.header-top {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  gap: 40px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 24px;
+  padding-right: 100px;
+  border-radius: 50px;
+  border: 2px solid #f1f5f9;
+  background: #f8fafc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.search-bar input:focus {
+  background: white;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.search-bar button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  bottom: 6px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-name {
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: var(--text-color);
+}
+
+.btn-small:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.wishlist-icon, .cart-icon {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+}
+
+.wishlist-icon:hover, .cart-icon:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}
+
+.wishlist-icon span:last-child, .cart-icon span:last-child {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: var(--secondary-color);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50px;
+  min-width: 18px;
+  text-align: center;
+}
+
+.header-nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 15px 20px 5px;
+}
+
+.header-nav a {
+  color: var(--light-text);
+  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.header-nav a:hover {
+  color: var(--primary-color);
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .header-top {
+    gap: 20px;
+  }
+  
+  .header-nav {
+    display: none; /* Hide on mobile/tablet, can implement a burger menu later */
+  }
+}

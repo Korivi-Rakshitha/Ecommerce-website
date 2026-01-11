@@ -1,0 +1,152 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.admin-dashboard h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ddd;
+}
+
+.admin-tabs button {
+  padding: 12px 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.admin-tabs button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.admin-tabs button:hover:not(.active) {
+  color: #111;
+}
+
+.admin-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.admin-section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.add-product-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.add-product-form input {
+  margin: 0;
+  padding: 10px;
+}
+
+.add-product-form button {
+  grid-column: 1 / -1;
+  background-color: #FF9900;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.add-product-form button:hover {
+  background-color: #e58c00;
+}
+
+.products-table,
+.orders-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.products-table table,
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table thead,
+.orders-table thead {
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #ddd;
+}
+
+.products-table th,
+.orders-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-right: 1px solid #ddd;
+}
+
+.products-table th:last-child,
+.orders-table th:last-child {
+  border-right: none;
+}
+
+.products-table td,
+.orders-table td {
+  padding: 12px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.products-table td:last-child,
+.orders-table td:last-child {
+  border-right: none;
+}
+
+.products-table tbody tr:hover,
+.orders-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .add-product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-product-form button {
+    grid-column: 1;
+  }
+
+  .products-table,
+  .orders-table {
+    overflow-x: auto;
+  }
+}
